@@ -231,6 +231,7 @@ class UnsubscribeController extends Page_Controller {
 			}
 
 			$templateData = array(
+				'Recipient' => $recipient,
 				'FirstName' => $recipient->FirstName,
                 'UnsubscribeLink' =>
                     Director::absoluteBaseURL() . "unsubscribe/index/".$recipient->ValidateHash."/$listIDs"

@@ -475,6 +475,7 @@ JS
 			}
 		}
 		$templateData = array(
+			'Recipient' => $recipient,
 			'FirstName' => $recipient->FirstName,
             'MemberInfoSection' => $emailableFields,
             'MailingLists' => $mailinglists,
@@ -540,6 +541,7 @@ JS
 					$mailingLists = $recipient->MailingLists();
 					$ids = implode(",", $mailingLists->getIDList());	
 					$templateData = array(
+						'Recipient' => $recipient,
 						'FirstName' => $recipient->FirstName,
             			'MailingLists' => $mailingLists,
             			'UnsubscribeLink' => 
